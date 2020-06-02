@@ -1,6 +1,6 @@
 package two_pointer;
 
-// TODO : 실패
+// TODO : 실패 - 해결
 // https://www.acmicpc.net/problem/2003
 // 소수의 연속합
 
@@ -17,8 +17,8 @@ public class Q1644 {
 
         if(N == 1) { System.out.print(0); return; }
 
-        check[2] = true;
-        for(int i = 2; i <= N/2; i++)
+        int sqrt = (int) Math.sqrt(N);
+        for(int i = 2; i <= sqrt; i++)
             for(int j = 2; j <= N/i; j++)
                 check[i*j] = true;
 
@@ -27,12 +27,8 @@ public class Q1644 {
 
         int as = arrayList.size();
         while(true) {
-            if(sum < N) sum += arrayList.get(end++);
-            else if(sum > N) sum -= arrayList.get(start++);
-            else {
-                sum += arrayList.get(end++);
-                sum -= arrayList.get(start++);
-            }
+            if(sum <= N) sum += arrayList.get(end++);
+            else sum -= arrayList.get(start++);
             if(sum == N) cnt++;
             if(end == as && sum <= N) break;
         }
