@@ -41,7 +41,7 @@ public class Q2110 {
 
             if (cnt >= C) {
                 start = mid + 1;
-                answer = Math.max(answer, mid);
+                answer = mid;
             } else {
                 end = mid - 1;
             }

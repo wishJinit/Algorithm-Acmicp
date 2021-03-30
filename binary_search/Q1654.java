@@ -42,7 +42,7 @@ public class Q1654 {
             }
             if (cnt >= N) {
                 start = mid + 1;
-                answer = Math.max((int) mid, answer);
+                answer = (int) mid;
             } else end = mid - 1;
         }
 

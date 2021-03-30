@@ -38,7 +38,7 @@ public class Q2805 {
             }
             if (sum >= M) {
                 start = mid + 1;
-                answer = Math.max((int) mid, answer);
+                answer = (int) mid;
             } else {
                 end = mid - 1;
             }
