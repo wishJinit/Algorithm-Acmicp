@@ -40,11 +40,11 @@ public class Q2981 {
     }
 
     private static int gcd(int a, int b) {
-        while (b != 0) {
-            int r = a % b;
-            a = b;
-            b = r;
+        if (a == 0) return b;
+        else if (b == 0) return a;
+        if (a % b == 0) {
+            return b;
         }
-        return a;
+        return gcd(b, a % b);
     }
 }
