@@ -42,7 +42,7 @@ public class Q10825 {
             list.add(new Student(name, kor, eng, math));
         }
 
-        list.sort(null);
+        Collections.sort(list);
         StringBuilder sb = new StringBuilder();
         for (Student s : list) {
             sb.append(s.name).append("\n");
